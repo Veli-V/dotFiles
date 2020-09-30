@@ -68,7 +68,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions)
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,3 +100,18 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 source ~/.agentti
+export PATH="/home/veli-v/scripts:$PATH"
+export PATH="/snap/bin:$PATH"
+export PATH="$PATH:/usr/lib/go-1.13/bin"
+export PATH="$PATH:/home/veli-v/.local/bin"
+export EDITOR="vim"
+export VISUAL="vim"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias tt="/home/veli-v/todo/todo.sh"
+eval $(thefuck --alias fuck)
+eval $(thefuck --alias vittu)
+alias FUCK="fuck --yeah"
+alias VITTU="fuck --yeah"
+alias tf="terraform"
