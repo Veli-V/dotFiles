@@ -57,3 +57,6 @@
 			 :files ("gitignore-mode.el")))
 
 (package! vulpea)
+
+;; paketissa oli bugi, siksi lukittu versio
+(package! straight :pin "3eca39d")
