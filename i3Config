@@ -27,7 +27,7 @@ floating_modifier $mod
 # start a terminal
 #bindsym $mod+Return exec roxterm
 #bindsym $mod+Return exec urxvt
-bindsym $mod+Return exec terminology
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -159,8 +159,10 @@ mode "resize" {
 
 # Oma lock screen
 #bindsym $mod+Ctrl+l exec i3lock 
-bindsym $mod+Ctrl+z exec ~/lock.sh
+bindsym $mod+Ctrl+z exec ~/scripts/lock.sh
 bindsym $mod+Ctrl+c exec /usr/bin/dm-tool switch-to-greeter
+# Make suspend use that lock screen
+exec xss-lock --transfer-sleep-lock -- ~/scripts/lock.sh --nofork
 
 bindsym $mod+r mode "resize"
 
@@ -210,3 +212,19 @@ bar {
 	position top
         status_command i3status
 }
+
+# Oma virran säätö vailkko
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id ~/scripts/i3exit.sh lock, mode "default"
+    bindsym e exec --no-startup-id ~/scripts/i3exit.sh logout, mode "default"
+    bindsym s exec --no-startup-id ~/scripts/i3exit.sh suspend, mode "default"
+    bindsym h exec --no-startup-id ~/scripts/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/scripts/i3exit.sh reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+p mode "$mode_system"
