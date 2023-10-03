@@ -34,19 +34,20 @@ URxvt*foreground: #c0c0c0
 !------------------------------------------------------------------------------
 ! u r x v t
 
-URxvt*termName: xterm-256color
+URxvt*termName:         xterm-256color
 URxvt*geometry:         112x22  
-URxvt*font:            xft:monospace:size=9
+URxvt*font:             xft:monospace:size=9
 URxvt*scrollBar:        false
-URxvt*scrollBar_right:        true
-URxvt*scrollColor:        #000000
+URxvt*scrollBar_right:  true
+URxvt*scrollColor:      #000000
+URxvt*saveLines:        25000
 
 ! Linkit kuntoon
-URxvt*perl-lib:            /usr/lib/urxvt/perl/
-URxvt*perl-ext-common:        default,matcher
-URxvt*urlLauncher:        /usr/bin/firefox
-URxvt*matcher.button:        1
-URxvt*matcher.pattern:   \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt*perl-lib:         /usr/lib/urxvt/perl/
+URxvt*perl-ext-common:  default,matcher
+URxvt*urlLauncher:      /usr/bin/firefox
+URxvt*matcher.button:   1
+URxvt*matcher.pattern:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 
 ! linkit näppikselle
 URxvt.keysym.Control-q: perl:matcher:last
