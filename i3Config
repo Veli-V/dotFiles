@@ -237,3 +237,6 @@ bindsym $mod+p exec ~/scripts/naytot.sh
 # touchpad toggle
 bindsym $mod+m exec ~/scripts/tptoggle.sh
 
+# fzf launcher
+for_window [instance="floating-term"] floating enable
+bindsym $mod+t exec --no-startup-id urxvt -geometry 170x30 -name floating-term -e zsh -c "~/scripts/fzf_run.sh"
