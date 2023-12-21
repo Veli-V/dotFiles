@@ -4,6 +4,9 @@
 URxvt*depth: 32
 URxvt*background: [90]#222222
 URxvt*foreground: #c0c0c0
+! to fix blue
+URxvt*color4:  #89cff0
+URxvt*color12: #89cff0
 
 ! Default
 ! 0: black
