@@ -111,3 +111,14 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source $HOME/.agentti
+
+export PATH="/home/veli-v/bin/emacs/bin:$PATH:/home/veli-v/scripts:/home/veli-v/.config/emacs/bin/:/home/veli-v/.local/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export AWS_SESSION_TOKEN_TTL="8h"
+
+alias tf=terraform
+
+# Zoxide päälle, parempi cd
+eval "$(zoxide init --cmd j zsh)"
