@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fzf-zsh-plugin git)
+plugins=(fzf git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -83,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 
 #Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='nvim'
 else
   export EDITOR='vim'
 fi
@@ -112,13 +112,23 @@ export NVM_DIR="$HOME/.nvm"
 
 source $HOME/.agentti
 
-export PATH="/home/veli-v/bin/emacs/bin:$PATH:/home/veli-v/scripts:/home/veli-v/.config/emacs/bin/:/home/veli-v/.local/bin"
+# Linux home pathit
+export PATH="/home/veli-v/bin/emacs/bin:$PATH:/home/veli-v/scripts:/home/veli-v/.config/emacs/bin/:/home/veli-v/.local/bin:/Users/veli-v/Library/Python/3.9/bin"
+# MAcos home pathit
+export PATH="/Users/veli-v/bin/emacs/bin:$PATH:/Users/veli-v/scripts:/Users/veli-v/.config/emacs/bin/:/Users/veli-v/.local/bin:/Users/veli-v/Library/Python/3.9/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export AWS_SESSION_TOKEN_TTL="8h"
 
 alias tf=terraform
+alias tfa=tofu apply --auto-approve
 
 # Zoxide päälle, parempi cd
 eval "$(zoxide init --cmd j zsh)"
+
+# Parempi LS
+alias ls=eza
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+alias vim=nvim
