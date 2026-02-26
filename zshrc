@@ -122,7 +122,7 @@ export PATH="/Users/veli-v/bin/emacs/bin:$PATH:/Users/veli-v/scripts:/Users/veli
 export AWS_SESSION_TOKEN_TTL="8h"
 
 alias tf=terraform
-alias tfa=tofu apply --auto-approve
+alias tfa="tofu apply --auto-approve"
 
 # Zoxide päälle, parempi cd
 eval "$(zoxide init --cmd j zsh)"
