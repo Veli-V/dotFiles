@@ -36,11 +36,11 @@ fi
 # --- Tool Integrations & Dependency Checks ---
 
 # Thefuck
-if command -v thefuck >/dev/null; then
-    eval $(thefuck --alias)
-else
-    echo "ℹ️ thefuck puuttuu (brew install thefuck / pip install thefuck)"
-fi
+#if command -v thefuck >/dev/null; then
+    #eval $(thefuck --alias)
+#else
+    #echo "ℹ️ thefuck puuttuu (brew install thefuck / pip install thefuck)"
+#fi
 
 # Zoxide (parempi cd)
 if command -v zoxide >/dev/null; then
