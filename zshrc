@@ -36,11 +36,11 @@ fi
 # --- Tool Integrations & Dependency Checks ---
 
 # Thefuck
-if command -v thefuck >/dev/null; then
-    eval $(thefuck --alias)
-else
-    echo "ℹ️ thefuck puuttuu (brew install thefuck / pip install thefuck)"
-fi
+#if command -v thefuck >/dev/null; then
+    #eval $(thefuck --alias)
+#else
+    #echo "ℹ️ thefuck puuttuu (brew install thefuck / pip install thefuck)"
+#fi
 
 # Zoxide (parempi cd)
 if command -v zoxide >/dev/null; then
@@ -87,6 +87,8 @@ export AWS_SESSION_TOKEN_TTL="8h"
 alias tf='terraform'
 alias tfa='tofu apply --auto-approve'
 
-
 # Added by Antigravity CLI installer
 export PATH="/Users/veli-v/.local/bin:$PATH"
+
+#cpd funnktio pathiin
+source ~/scripts/copilot-docker-function.sh
