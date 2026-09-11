@@ -86,3 +86,6 @@ export AWS_SESSION_TOKEN_TTL="8h"
 # Terraform / OpenTofu
 alias tf='terraform'
 alias tfa='tofu apply --auto-approve'
+
+source ~/scripts/copilot-docker-function.sh
+
