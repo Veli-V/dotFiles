@@ -86,3 +86,7 @@ export AWS_SESSION_TOKEN_TTL="8h"
 # Terraform / OpenTofu
 alias tf='terraform'
 alias tfa='tofu apply --auto-approve'
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/veli-v/.local/bin:$PATH"
