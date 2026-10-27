@@ -92,3 +92,7 @@ export PATH="/Users/veli-v/.local/bin:$PATH"
 
 #cpd funnktio pathiin
 source ~/scripts/copilot-docker-function.sh
+
+# Claude Code: work config by default, claude-personal for ~/.claude
+export CLAUDE_CONFIG_DIR="$HOME/.claude-work"
+claude-personal() { env -u CLAUDE_CONFIG_DIR claude "$@"; }
